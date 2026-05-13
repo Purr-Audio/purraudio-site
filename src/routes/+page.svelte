@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 
 	let mouseX = $state(50);
@@ -6,16 +6,16 @@
 	let targetX = 50;
 	let targetY = 50;
 
-	function lerp(a, b, t) {
+	function lerp(a: number, b: number, t: number): number {
 		return a + (b - a) * t;
 	}
 
-	function getDistance(x1, y1, x2, y2) {
+	function getDistance(x1: number, y1: number, x2: number, y2: number): number {
 		return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
 	}
 
 	onMount(() => {
-		let animFrame;
+		let animFrame: number;
 
 		const animate = () => {
 			const nextX = lerp(mouseX, targetX, 0.06);
@@ -72,10 +72,10 @@
 	>
 		<h1 class="font-['Outfit'] font-bold text-[#e9d5ff] tracking-[0.25em]">PURR AUDIO</h1>
 		<a
-			href="https://cosmo.purraudio.dev/lab"
-			class="font-['Outfit'] text-sm text-[#e9d5ff]/50 tracking-[0.2em] no-underline transition-colors duration-300 hover:text-[#e9d5ff]/90"
+			href="/cosmo"
+			class="font-['Outfit'] text-lg text-[#e9d5ff]/50 tracking-[0.2em] hover:underline transition-all duration-300 hover:text-[#e9d5ff]/90"
 		>
-			Cosmo
+			Cosmo PD-101 Synthesizer
 		</a>
 	</main>
 </div>
