@@ -48,25 +48,27 @@
 			<a href="/" class="font-['Outfit'] font-bold text-[#e9d5ff] text-lg tracking-[0.15em] hover:opacity-80 transition-opacity">
 				PURR AUDIO
 			</a>
-			<a
-				href="https://cosmo.purraudio.dev/lab"
-				target="_blank"
-				class="font-['Outfit'] text-sm text-[#e9d5ff]/60 tracking-widest hover:text-[#e9d5ff] transition-colors px-4 py-2 rounded-full border border-[#e9d5ff]/20 hover:border-[#e9d5ff]/40"
-			>
-				Open Lab
-			</a>
+			<div class="flex items-center gap-4">
+				<a
+					href="https://cosmo-docs.purraudio.dev/"
+					target="_blank"
+					class="font-['Outfit'] text-sm text-[#e9d5ff]/50 tracking-widest hover:text-[#e9d5ff] transition-colors"
+				>
+					Manual
+				</a>
+				<a
+					href="https://cosmo.purraudio.dev/lab"
+					target="_blank"
+					class="font-['Outfit'] text-sm text-[#e9d5ff]/60 tracking-widest hover:text-[#e9d5ff] transition-colors px-4 py-2 rounded-full border border-[#e9d5ff]/20 hover:border-[#e9d5ff]/40"
+				>
+					Open Web Synth
+				</a>
+			</div>
 		</nav>
 
 		<!-- Hero -->
 		<section class="min-h-screen flex flex-col items-center justify-center px-6 text-center">
 			<div class="mb-6">
-				<svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-[#c084fc] mx-auto opacity-60">
-					<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
-					<circle cx="9" cy="10" r="1.5" fill="currentColor" stroke="none" />
-					<circle cx="15" cy="10" r="1.5" fill="currentColor" stroke="none" />
-					<path d="M8 14c1.5 2 3.5 2.5 4 2.5s2.5-.5 4-2.5" />
-				</svg>
-			</div>
 			<h1 class="font-['Outfit'] font-bold text-[#e9d5ff] text-5xl md:text-7xl tracking-widest mb-4">
 				Cosmo <span class="text-[#c084fc]">PD-101</span>
 			</h1>
@@ -81,6 +83,13 @@
 					class="font-['Outfit'] font-bold text-sm bg-[#7c3aed] text-white px-8 py-3.5 rounded-full tracking-widest hover:bg-[#6d28d9] transition-colors shadow-lg shadow-purple-900/30"
 				>
 					TRY IT NOW
+				</a>
+				<a
+					href="https://cosmo-docs.purraudio.dev/"
+					target="_blank"
+					class="font-['Outfit'] text-sm text-[#e9d5ff]/70 px-8 py-3.5 rounded-full tracking-widest border border-[#e9d5ff]/20 hover:border-[#e9d5ff]/40 hover:text-[#e9d5ff] transition-all"
+				>
+					READ THE MANUAL
 				</a>
 				<a
 					href="https://github.com/fpbrault/cosmo-pd"
@@ -188,7 +197,7 @@
 					Ready to explore?
 				</h2>
 				<p class="font-['Outfit'] text-[#e9d5ff]/50 text-lg mb-10 leading-relaxed">
-					Open the Cosmo Lab in your browser and start making sounds. 
+					Open the Cosmo Web Synth in your browser and start making sounds. 
 					No install required.
 				</p>
 				<a
@@ -196,7 +205,7 @@
 					target="_blank"
 					class="inline-block font-['Outfit'] font-bold text-sm bg-[#7c3aed] text-white px-10 py-4 rounded-full tracking-widest hover:bg-[#6d28d9] transition-colors shadow-lg shadow-purple-900/30"
 				>
-					OPEN COSMO LAB
+					OPEN WEB SYNTH
 				</a>
 			</div>
 		</section>

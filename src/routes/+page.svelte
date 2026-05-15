@@ -77,6 +77,13 @@
 		>
 			Cosmo PD-101 Synthesizer
 		</a>
+		<a
+			href="https://cz-explorer.purraudio.dev/"
+			target="_blank"
+			class="font-['Outfit'] text-lg text-[#e9d5ff]/35 tracking-[0.2em] hover:underline transition-all duration-300 hover:text-[#e9d5ff]/70"
+		>
+			CZ Explorer
+		</a>
 	</main>
 </div>
 
