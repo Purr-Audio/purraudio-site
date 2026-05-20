@@ -57,46 +57,45 @@
 					Manual
 				</a>
 				<a
-					href="https://cosmo.purraudio.dev/lab"
+					href="https://store.purraudio.dev"
 					target="_blank"
 					class="font-['Outfit'] text-sm text-[#e9d5ff]/60 tracking-widest hover:text-[#e9d5ff] transition-colors px-4 py-2 rounded-full border border-[#e9d5ff]/20 hover:border-[#e9d5ff]/40"
 				>
-					Open Web Synth
+					Store
 				</a>
 			</div>
 		</nav>
 
 		<!-- Hero -->
 		<section class="min-h-screen flex flex-col items-center justify-center px-6 text-center">
-			<div class="mb-6">
 			<h1 class="font-['Outfit'] font-bold text-[#e9d5ff] text-5xl md:text-7xl tracking-widest mb-4">
 				Cosmo <span class="text-[#c084fc]">PD-101</span>
 			</h1>
 			<p class="font-['Outfit'] text-[#e9d5ff]/50 text-lg md:text-xl tracking-wide max-w-xl mx-auto mb-10 leading-relaxed">
-				A phase distortion synthesizer inspired by the legendary Casio CZ-101. 
+				A free and open-source phase distortion synthesizer inspired by the legendary Casio CZ-101. 
 				Play it in your browser, on your desktop, or inside your DAW.
 			</p>
-			<div class="flex flex-wrap gap-4 justify-center">
+			<div class="flex flex-wrap gap-4 justify-center uppercase">
 				<a
 					href="https://cosmo.purraudio.dev/lab"
 					target="_blank"
 					class="font-['Outfit'] font-bold text-sm bg-[#7c3aed] text-white px-8 py-3.5 rounded-full tracking-widest hover:bg-[#6d28d9] transition-colors shadow-lg shadow-purple-900/30"
 				>
-					TRY IT NOW
+					Try it now
 				</a>
 				<a
-					href="https://cosmo-docs.purraudio.dev/"
+					href="https://store.purraudio.dev/"
 					target="_blank"
 					class="font-['Outfit'] text-sm text-[#e9d5ff]/70 px-8 py-3.5 rounded-full tracking-widest border border-[#e9d5ff]/20 hover:border-[#e9d5ff]/40 hover:text-[#e9d5ff] transition-all"
 				>
-					READ THE MANUAL
+					Get Cosmo PD-101
 				</a>
 				<a
 					href="https://github.com/fpbrault/cosmo-pd"
 					target="_blank"
 					class="font-['Outfit'] text-sm text-[#e9d5ff]/70 px-8 py-3.5 rounded-full tracking-widest border border-[#e9d5ff]/20 hover:border-[#e9d5ff]/40 hover:text-[#e9d5ff] transition-all"
 				>
-					VIEW ON GITHUB
+					GitHub
 				</a>
 			</div>
 		</section>
