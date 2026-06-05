@@ -1,0 +1,12 @@
+export const pageShell = 'min-h-screen bg-base-200 font-sans text-base-content';
+export const heroSection = 'relative mx-auto w-full max-w-7xl overflow-hidden px-6 pb-20 pt-12';
+export const heroGlow = 'absolute inset-x-0 top-0 -z-10 mx-auto h-96 max-w-4xl rounded-full bg-primary/10 blur-3xl';
+export const heroText = 'mx-auto max-w-3xl text-center';
+export const eyebrow = 'mb-4 text-xs font-bold uppercase tracking-widest text-primary';
+export const heroTitle = 'm-0 text-5xl font-bold leading-none tracking-tight sm:text-7xl';
+export const introText = 'mx-auto mt-5 max-w-2xl text-lg leading-8 text-base-content/65';
+export const sectionGrid = 'mx-auto grid w-full max-w-6xl grid-cols-editorial gap-12 px-6 py-16 max-lg:grid-cols-1';
+export const sectionEyebrow = 'mb-3 text-xs font-bold uppercase tracking-widest text-primary';
+export const sectionTitle = 'm-0 text-4xl font-bold leading-tight tracking-tight sm:text-5xl';
+export const bodyCopy = 'text-lg leading-8 text-base-content/60';
+export const mutedCopy = 'text-base leading-7 text-base-content/50';

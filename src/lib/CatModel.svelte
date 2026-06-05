@@ -1,10 +1,13 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import * as THREE from 'three';
 
-	let container;
-	let renderer, scene, camera, catGroup;
-	let animId;
+	let container: HTMLDivElement;
+	let renderer: THREE.WebGLRenderer;
+	let scene: THREE.Scene;
+	let camera: THREE.PerspectiveCamera;
+	let catGroup: THREE.Group;
+	let animId: number;
 	let mouseX = 0, mouseY = 0;
 
 	onMount(() => {
@@ -155,7 +158,7 @@
 		scene.add(disc);
 
 		// Mouse
-		const handleMove = (e) => {
+		const handleMove = (e: MouseEvent) => {
 			mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
 			mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
 		};

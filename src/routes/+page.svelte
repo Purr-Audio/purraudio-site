@@ -27,7 +27,7 @@
 			animFrame = requestAnimationFrame(animate);
 		};
 
-		const handleMove = (e) => {
+		const handleMove = (e: MouseEvent) => {
 			targetX = (e.clientX / window.innerWidth) * 100;
 			targetY = (e.clientY / window.innerHeight) * 100;
 		};
@@ -52,95 +52,45 @@
 	let textGlow2 = $derived(0.15 + intensity * 0.3);
 	let textGlow3 = $derived(0.08 + intensity * 0.15);
 	let dropGlow = $derived(0.2 + intensity * 0.4);
+
+	const homeLink =
+		'link inline-flex min-h-8 translate-y-2 border-b border-current text-center font-sans text-home-link tracking-home-link text-home-text/80 no-underline opacity-0 underline-offset-4 transition hover:-translate-y-0.5 hover:text-home-text hover:drop-shadow-link-glow focus-visible:-translate-y-0.5 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-home-text/75 motion-reduce:translate-y-0 motion-reduce:opacity-100';
 </script>
 
-<div class="scene">
+<div class="fixed inset-0 bg-bg">
 	<div
-		class="glow-primary"
-		style="left: {mouseX}%; top: {mouseY}%; --primary-alpha: {primaryAlpha}; --primary-mid-alpha: {primaryMidAlpha};"
+		class="pointer-events-none absolute h-home-glow-large w-home-glow-large -translate-x-1/2 -translate-y-1/2 rounded-full blur-glow-large"
+		style="left: {mouseX}%; top: {mouseY}%; background: radial-gradient(circle, rgba(147, 51, 234, {primaryAlpha}) 0%, rgba(147, 51, 234, {primaryMidAlpha}) 30%, transparent 60%);"
 	></div>
 	<div
-		class="glow-secondary"
-		style="left: {100 - mouseX}%; top: {100 - mouseY}%; --secondary-alpha: {secondaryAlpha}; --secondary-mid-alpha: {secondaryMidAlpha};"
+		class="pointer-events-none absolute h-home-glow-medium w-home-glow-medium -translate-x-1/2 -translate-y-1/2 rounded-full blur-glow-medium"
+		style="left: {100 - mouseX}%; top: {100 - mouseY}%; background: radial-gradient(circle, rgba(236, 72, 153, {secondaryAlpha}) 0%, rgba(236, 72, 153, {secondaryMidAlpha}) 35%, transparent 65%);"
 	></div>
-	<div class="noise"></div>
-	<div class="vignette"></div>
+	<div class="noise pointer-events-none fixed inset-0 bg-repeat opacity-10"></div>
+	<div class="pointer-events-none fixed inset-0 bg-radial-[ellipse_80%_80%_at_50%_50%] from-transparent from-30% to-black/70"></div>
 
 	<main
-		class="relative z-10 flex flex-col items-center justify-center min-h-screen gap-2"
-		style="--text-glow-1: {textGlow1}; --text-glow-2: {textGlow2}; --text-glow-3: {textGlow3}; --drop-glow: {dropGlow};"
+		class="relative z-10 flex min-h-screen flex-col items-center justify-center gap-6 p-8 text-center"
 	>
-		<h1 class="font-['Outfit'] font-bold text-[#e9d5ff] tracking-[0.25em]">PURR AUDIO</h1>
-		<a
-			href="/cosmo"
-			class="font-['Outfit'] text-lg text-[#e9d5ff]/50 tracking-[0.2em] hover:underline transition-all duration-300 hover:text-[#e9d5ff]/90"
+		<h1
+			class="animate-logo-in font-sans text-home-logo font-bold tracking-logo text-home-text"
+			style="text-shadow: 0 0 60px rgba(147, 51, 234, {textGlow1}), 0 0 120px rgba(147, 51, 234, {textGlow2}), 0 0 200px rgba(147, 51, 234, {textGlow3}); filter: drop-shadow(0 0 40px rgba(192, 132, 252, {dropGlow}));"
 		>
-			Cosmo PD-101 Synthesizer
-		</a>
-		<a
-			href="/cz-explorer"
-			class="font-['Outfit'] text-lg text-[#e9d5ff]/35 tracking-[0.2em] hover:underline transition-all duration-300 hover:text-[#e9d5ff]/70"
-		>
-			CZ Explorer
-		</a>
+			PURR AUDIO
+		</h1>
+		<nav class="flex flex-col items-center gap-3" aria-label="Purr Audio products">
+			<a
+				href="/cosmo"
+				class={`${homeLink} animate-link-in-one`}
+			>
+				Cosmo PD-101 Synthesizer
+			</a>
+			<a
+				href="/cz-explorer"
+				class={`${homeLink} animate-link-in-two`}
+			>
+				CZ Explorer
+			</a>
+		</nav>
 	</main>
 </div>
-
-<style lang="css">
-	.scene {
-		position: fixed;
-		inset: 0;
-		background: #07070d;
-	}
-
-	.glow-primary {
-		position: absolute;
-		width: 70vmax;
-		height: 70vmax;
-		border-radius: 50%;
-		background: radial-gradient(circle, rgba(147, 51, 234, var(--primary-alpha)) 0%, rgba(147, 51, 234, var(--primary-mid-alpha)) 30%, transparent 60%);
-		filter: blur(60px);
-		transform: translate(-50%, -50%);
-		pointer-events: none;
-	}
-
-	.glow-secondary {
-		position: absolute;
-		width: 50vmax;
-		height: 50vmax;
-		border-radius: 50%;
-		background: radial-gradient(circle, rgba(236, 72, 153, var(--secondary-alpha)) 0%, rgba(236, 72, 153, var(--secondary-mid-alpha)) 35%, transparent 65%);
-		filter: blur(70px);
-		transform: translate(-50%, -50%);
-		pointer-events: none;
-	}
-
-	.noise {
-		position: fixed;
-		inset: 0;
-		/* background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.77' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); */
-		opacity: 0.11;
-		pointer-events: none;
-		background-repeat: repeat;
-	}
-
-	@keyframes grain {
-		0%, 100% { transform: translate(0, 0); }
-	}
-
-	.vignette {
-		position: fixed;
-		inset: 0;
-		background: radial-gradient(ellipse 80% 80% at 50% 50%, transparent 30%, rgba(0, 0, 0, 0.7) 100%);
-		pointer-events: none;
-	}
-
-	h1 {
-		font-size: clamp(2rem, 10vw, 6rem);
-		text-shadow:
-			0 0 60px rgba(147, 51, 234, var(--text-glow-1)),
-			0 0 120px rgba(147, 51, 234, var(--text-glow-2)),
-			0 0 200px rgba(147, 51, 234, var(--text-glow-3));
-		filter: drop-shadow(0 0 40px rgba(192, 132, 252, var(--drop-glow)));
-	}
-</style>
